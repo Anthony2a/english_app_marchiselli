@@ -1,0 +1,300 @@
+<html>
+    <head>
+        <link  rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <h2>Détails du Profil</h2>
+        <div id="profileDetails">
+            <p>Nom : <span id="profileName"></span></p>
+            <p>Age : <span id="profileAge"></span></p>
+            <p>Nationality : <span id="profileNationality"></span></p>
+            <p>Strengh : <span id="profileStrengh"></span></p>
+            <p>Weakness : <span id="profileWeakness"></span></p>
+            <p>Achievement : <span id="profileAchievement"></span></p>
+            <p>Fun Fact : <span id="profileFact"></span></p>
+        </div>
+        <button onclick="window.location.href = './index.html'">go back</button>        
+        
+        <script>
+            function getQueryParameter(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+            const data = {
+                "profiles": [
+                    {
+                        "id": 1,
+                        "name": "Astadjam",
+                        "firstname": "Ahmadou",
+                        "age": 28,
+                        "nationality": "",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "programmation",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 2,
+                        "name": "Dupont",
+                        "firstname": "Marie",
+                        "age": 28,
+                        "nationality": "marie.dupont@example.com",
+                        "strengh": "Paris",
+                        "weakness": "Développeuse",
+                        "achievement": ["programmation", "lecture", "voyages"],
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 3,
+                        "name": "Dupont",
+                        "firstname": "Marie",
+                        "age": 28,
+                        "nationality": "",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 4,
+                        "name": "Belarif",
+                        "firstname": "Louiza",
+                        "age": 29,
+                        "nationality": "Algeria",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 5,
+                        "name": "Benameur",
+                        "firstname": "Kaoutar",
+                        "age": 25,
+                        "nationality": "Algeria",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 6,
+                        "name": "Dupont",
+                        "firstname": "Marie",
+                        "age": 28,
+                        "nationality": "marie.dupont@example.com",
+                        "strengh": "Paris",
+                        "weakness": "Développeuse",
+                        "achievement": ["programmation", "lecture", "voyages"],
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 7,
+                        "name": "Bovy",
+                        "firstname": "Thomas",
+                        "age": 24,
+                        "nationality": "France",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 8,
+                        "name": "Colin",
+                        "firstname": "Anthony",
+                        "age": 22,
+                        "nationality": "France",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 9,
+                        "name": "Eveille",
+                        "firstname": "Marie",
+                        "age": 23,
+                        "nationality": "France",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 10,
+                        "name": "Fortini",
+                        "firstname": "Donat",
+                        "age": 24,
+                        "nationality": "France",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 11,
+                        "name": "Garau",
+                        "firstname": "Thomas",
+                        "age": 23,
+                        "nationality": "France",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 12,
+                        "name": "Dupont",
+                        "firstname": "Marie",
+                        "age": 28,
+                        "nationality": "",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 13,
+                        "name": "Hamadene",
+                        "firstname": "Yasmine",
+                        "age": 24,
+                        "nationality": "Algeria",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 14,
+                        "name": "Ismael Otban",
+                        "firstname": "Mohamed",
+                        "age": 23,
+                        "nationality": "France",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 15,
+                        "name": "Kilimou",
+                        "firstname": "Pouwedeou",
+                        "age": 24,
+                        "nationality": "Togo",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 16,
+                        "name": "Dupont",
+                        "firstname": "Marie",
+                        "age": 28,
+                        "nationality": "marie.dupont@example.com",
+                        "strengh": "Paris",
+                        "weakness": "Développeuse",
+                        "achievement": ["programmation", "lecture", "voyages"],
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 17,
+                        "name": "Marchiselli",
+                        "firstname": "Anthony",
+                        "age": 23,
+                        "nationality": "France",
+                        "strengh": "Knows how a computer works",
+                        "weakness": "Is on the moon (in the metaphorical sense of the phrase)",
+                        "achievement": "Won at the hackathon once",
+                        "fun_fact": "He exist"
+                    },
+                    {
+                        "id": 18,
+                        "name": "Marechal-Ball",
+                        "firstname": "Antoine",
+                        "age": 21,
+                        "nationality": "France",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 19,
+                        "name": "Dupont",
+                        "firstname": "Marie",
+                        "age": 28,
+                        "nationality": "marie.dupont@example.com",
+                        "strengh": "Paris",
+                        "weakness": "Développeuse",
+                        "achievement": ["programmation", "lecture", "voyages"],
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 20,
+                        "name": "Dupont",
+                        "firstname": "Marie",
+                        "age": 28,
+                        "nationality": "marie.dupont@example.com",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 21,
+                        "name": "Vigneau",
+                        "firstname": "Pascal",
+                        "age": 22,
+                        "nationality": "France",
+                        "strengh": "",
+                        "weakness": "",
+                        "achievement": "",
+                        "fun_fact": "Too many that I won't tell for his own good"
+                    },
+                    {
+                        "id": 22,
+                        "name": "Dupont",
+                        "firstname": "Marie",
+                        "age": 28,
+                        "nationality": "marie.dupont@example.com",
+                        "strengh": "Paris",
+                        "weakness": "Développeuse",
+                        "achievement": ["programmation", "lecture", "voyages"],
+                        "fun_fact": ""
+                    },
+                    {
+                        "id": 23,
+                        "name": "Dupont",
+                        "firstname": "Marie",
+                        "age": 28,
+                        "nationality": "marie.dupont@example.com",
+                        "strengh": "Paris",
+                        "weakness": "Développeuse",
+                        "achievement": ["programmation", "lecture", "voyages"],
+                        "fun_fact": ""
+                    }
+                ]
+            };
+            const profiles = data.profiles;
+            
+            const profile = profiles.find(p => p.id == getQueryParameter("id"));
+
+            console.log(profile)
+            console.log(profile.name)
+
+            if(profile) {
+                document.getElementById('profileName').textContent = `${profile.name} ${profile.firstname}`;
+                document.getElementById('profileAge').textContent = profile.age;
+                document.getElementById('profileNationality').textContent = profile.nationality;
+                document.getElementById('profileStrengh').textContent = profile.strengh;
+                document.getElementById('profileWeakness').textContent = profile.weakness;
+                document.getElementById('profileAchievement').textContent = profile.achievement;
+                document.getElementById('profileFact').textContent = profile.fun_fact;
+            } else {
+                console.log("fuck you")
+            }
+        </script>
+    </body>
+</html>

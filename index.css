@@ -1,0 +1,27 @@
+body{
+    background: linear-gradient(to right, #017951, #016579);
+    color: white;
+}
+
+.text_title{
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.text_group_name{
+    margin-left: 2%;
+    width: 100%;
+    text-align: start;
+    font-size: 34px;
+}
+
+img{
+    margin-left: 1%;
+    transition: .3s;
+    height:250px;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
